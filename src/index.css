@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #ebeefd;
+  --color-primary-100: #e1e6fc;
+  --color-primary-200: #c1cbf9;
+  --color-primary-300: #3756ed;
+  --color-primary-400: #324dd5;
+  --color-primary-500: #2c45be;
+  --color-primary-600: #2941b2;
+  --color-primary-700: #21348e;
+  --color-primary-800: #19276b;
+  --color-primary-900: #131e53;
+
+  --color-secondary: #ebf7fd;
+  --color-secondary-100: #e1f3fc;
+  --color-secondary-200: #c1e7f9;
+  --color-secondary-300: #37b1ed;
+  --color-secondary-400: #329fd5;
+  --color-secondary-500: #2c8ebe;
+  --color-secondary-600: #2985b2;
+  --color-secondary-700: #216a8e;
+  --color-secondary-800: #19506b;
+  --color-secondary-900: #133e53;
+
+  --color-tertiary: #f1ebfd;
+  --color-tertiary-100: #eae1fc;
+  --color-tertiary-200: #d4c1f9;
+  --color-tertiary-300: #7337ed;
+  --color-tertiary-400: #6832d5;
+  --color-tertiary-500: #5c2cbe;
+  --color-tertiary-600: #5629b2;
+  --color-tertiary-700: #45218e;
+  --color-tertiary-800: #34196b;
+  --color-tertiary-900: #281353;
+
+  --color-background-dark: #060609;
+
+  --color-red: #fdebee;
+  --color-red-100: #fce1e6;
+  --color-red-200: #f9c1cb;
+  --color-red-300: #ed3756;
+  --color-red-400: #d5324d;
+  --color-red-500: #be2c45;
+  --color-red-600: #b22941;
+  --color-red-700: #8e2134;
+  --color-red-800: #6b1927;
+  --color-red-900: #53131e;
+
+  --color-green: #ebf7ec;
+  --color-green-100: #e1f3e3;
+  --color-green-200: #c2e6c5;
+  --color-green-300: #39ad44;
+  --color-green-400: #339c3d;
+  --color-green-500: #2e8a36;
+  --color-green-600: #2b8233;
+  --color-green-700: #226829;
+  --color-green-800: #1a4e1f;
+  --color-green-900: #143d18;
+
+  --color-orange: #fdf6eb;
+  --color-orange-100: #fcf1e1;
+  --color-orange-200: #f9e2c1;
+  --color-orange-300: #eda137;
+  --color-orange-400: #d59132;
+  --color-orange-500: #be812c;
+  --color-orange-600: #b27929;
+  --color-orange-700: #8e6121;
+  --color-orange-800: #6b4819;
+  --color-orange-900: #533813;
+
+  --color-white: #fdfdfe;
+  --color-white-100: #fbfcfd;
+  --color-white-200: #f7f9fc;
+  --color-white-300: #e6ebf4;
+  --color-white-400: #cfd4dc;
+  --color-white-500: #b8bcc3;
+  --color-white-600: #adb0b7;
+  --color-white-700: #8a8d92;
+  --color-white-800: #676a6e;
+  --color-white-900: #515255;
+
+  --color-black: #e9eaeb;
+  --color-black-100: #dfdfe2;
+  --color-black-200: #bcbdc2;
+  --color-black-300: #27293b;
+  --color-black-400: #232535;
+  --color-black-500: #1f212f;
+  --color-black-600: #1d1f2c;
+  --color-black-700: #171923;
+  --color-black-800: #12121b;
+  --color-black-900: #0e0e15;
+
+  --color-gray: #eff0f1;
+  --color-gray-100: #e8e8ea;
+  --color-gray-200: #cfcfd5;
+  --color-gray-300: #636576;
+  --color-gray-400: #595b6a;
+  --color-gray-500: #4f515e;
+  --color-gray-600: #4a4c59;
+  --color-gray-700: #3b3d47;
+  --color-gray-800: #2d2d35;
+  --color-gray-900: #232329;
+
+  --color-warning: #eda137;
+}
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .animate-modal-in {
+    animation: modalIn 0.15s ease-out;
+  }
+
+  @keyframes modalIn {
+    from {
+      opacity: 0;
+      transform: scale(0.96) translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
